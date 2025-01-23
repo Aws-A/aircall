@@ -91,6 +91,13 @@ const App = () => {
           Unarchive All Calls
         </button>
       </div>
+      <div id="navBar">
+        <img src='./images/Ringer.png'/>
+        <img src='./images/Customer.png'/>
+        <img src='./images/CallKeys.png' className='keys'/>
+        <img src='./images/Gear.png'/>
+        <img src='./images/Online.png'/>
+      </div>
     </div>
   );
 };

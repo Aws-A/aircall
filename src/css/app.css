@@ -10,6 +10,7 @@
 }
 
 #app .container {
+  position: relative;
   width: 376px;
   height: 666px;
   z-index: 100;
@@ -21,12 +22,14 @@
 
 #app .container-view {
   background-color: #EFEFEF;
-  padding: 20px;
+  height: 20px;
+  font-size: 19px;
+  padding: 10px;
 }
 
 #title {
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 /* Container for the toggle switch */
@@ -130,8 +133,9 @@
 .calls {
   display: flex;
   width: 300px;
-  font-size: 22px;
-  margin-top: 5%;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 3%;
   padding-bottom: 1%;
   border-bottom: solid 1px #979797;
 }
@@ -180,6 +184,9 @@
 }
 
 #buttons {
+  position: fixed;
+  left: 43%;
+  bottom: 19%;
   margin-top: 5%;
   text-align: center;
 }
@@ -187,7 +194,7 @@
 .btn {
   font-size: 17px;
   font-weight: 600;
-  margin: 2% 0%;
+  margin: 3% 0%;
   border: none;
   border-radius: 5px;
   width: 200px;
@@ -203,4 +210,25 @@
 .unarchAll {
   color: rgb(0, 0, 0);
   background: linear-gradient(to right, #F85D2F, #FFB847);
+}
+
+#navBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+  height: 50px;
+  background-color: #EFEFEF;
+}
+
+#navBar img {
+  width: 10%;
+}
+
+#navBar .keys {
+  width: 17%;
+  margin-bottom: 10%;
 }
