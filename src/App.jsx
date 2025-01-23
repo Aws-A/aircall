@@ -31,12 +31,14 @@ const App = () => {
     // Move all unarchived calls to archived
     setArchivedCalls([...archivedCalls, ...unarchivedCalls]);
     setUnarchivedCalls([]); // Clear unarchived calls
+    setSelectedCall(null); // Reset selected call
   };
 
   const unarchiveAll = () => {
     // Move all archived calls to unarchived
     setUnarchivedCalls([...unarchivedCalls, ...archivedCalls]);
     setArchivedCalls([]); // Clear archived calls
+    setSelectedCall(null); // Reset selected call
   };
 
   const renderCall = (call) => (
@@ -49,7 +51,7 @@ const App = () => {
         <div className={`details ${call.id}`}>
           <span className="date">{call.date}</span>
           <span className="time">{call.time}</span>
-          <div className="duration">Time: {call.duration}</div>
+          <div className="duration">Duration: {call.duration}</div>
         </div>
       )}
     </React.Fragment>
