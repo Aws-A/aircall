@@ -58,7 +58,7 @@
   right: 0;
   bottom: 0;
   background-color: #EFEFEF;
-  border-radius: 10px; /* Make it round */
+  border-radius: 5px; /* Make it round */
   transition: 0.4s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -70,7 +70,7 @@
   width: 50%;
   height: 100%;
   background: linear-gradient(to right, #176211, #2BBC1F);
-  border-radius: 10px;
+  border-radius: 5px;
   transition: 0.4s;
 }
 
@@ -95,7 +95,7 @@
 /* Highlight the active text based on the toggle state */
 
 .toggle-input:not(:checked) ~ .toggle-slider .text-left {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .toggle-input:not(:checked) ~ .toggle-slider .text-right {
@@ -107,7 +107,7 @@
 }
 
 .toggle-input:checked ~ .toggle-slider .text-right {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .text-left {
@@ -203,7 +203,6 @@
 .btn {
   font-size: 17px;
   font-weight: 600;
-  color: white;
   margin: 2% 0%;
   border: none;
   border-radius: 5px;
@@ -213,9 +212,11 @@
 }
 
 .archAll {
+  color: white;
   background: linear-gradient(to right, #176211, #2BBC1F);
 }
 
 .unarchAll {
+  color: rgb(0, 0, 0);
   background: linear-gradient(to right, #F85D2F, #FFB847);
 }
