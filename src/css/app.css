@@ -20,6 +20,186 @@
 }
 
 #app .container-view {
+  background-color: #EFEFEF;
   padding: 20px;
 }
 
+#title {
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Container for the toggle switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Add space between the toggle and text */
+  margin-top: 5%;
+}
+
+/* The toggle switch itself */
+.toggle {
+  position: relative;
+  width: 333px;
+  height: 33px;
+  display: inline-block;
+}
+
+.toggle-input {
+  display: none; /* Hide the actual checkbox */
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #EFEFEF;
+  border-radius: 10px; /* Make it round */
+  transition: 0.4s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Circle inside the slider */
+.toggle-slider:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #176211, #2BBC1F);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.toggle-input:checked + .toggle-slider:before {
+  transform: translateX(167px);
+  background: linear-gradient(to right, #F85D2F, #FFB847);
+}
+
+/* Text labels */
+.toggle-texts {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.text-left, .text-right {
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Highlight the active text based on the toggle state */
+
+.toggle-input:not(:checked) ~ .toggle-slider .text-left {
+  color: white;
+}
+
+.toggle-input:not(:checked) ~ .toggle-slider .text-right {
+  color: #979797;
+}
+
+.toggle-input:checked ~ .toggle-slider .text-left {
+  color: #979797;
+}
+
+.toggle-input:checked ~ .toggle-slider .text-right {
+  color: white;
+}
+
+.text-left {
+  position: relative;
+  top: 24%;
+  left: 8%;
+}
+
+.text-right {
+  position: relative;
+  top: 24%;
+  left: 20%;
+}
+
+#allCalls {
+  margin-top: 3%;
+  margin-left: 10%;
+}
+
+.calls {
+  display: flex;
+  width: 300px;
+  font-size: 25px;
+  margin-top: 7%;
+  padding-bottom: 5%;
+  border-bottom: solid 1px #979797;
+}
+
+.calls span {
+  flex: 2;
+}
+
+.small-img {
+  width: 10%;
+  height: auto;
+}
+
+#archived span:checked {
+  color: #2BBC1F;
+}
+
+.details {
+  margin-top: 5%;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 17px;
+}
+
+.time {
+  margin-left: 15%;
+  font-size: 17px;
+  background-color: #D6EBFA;
+  border: 1px solid #46A6E8;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.duration {
+  background-color: #F0FBEF;
+  border: 1px solid #2CC320;
+  border-radius: 5px;
+  width: 44%;
+  height: 25px;
+  font-size: 17px;
+  text-align: center;
+  margin: 7% 25% 5% 18%;
+  padding-top: 3%;
+}
+
+#buttons {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.btn {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  margin: 2% 0%;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 33px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+
+.archAll {
+  background: linear-gradient(to right, #176211, #2BBC1F);
+}
+
+.unarchAll {
+  background: linear-gradient(to right, #F85D2F, #FFB847);
+}
